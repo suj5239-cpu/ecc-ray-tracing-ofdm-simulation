@@ -1,0 +1,594 @@
+<scene version="3.0.0">
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0000">
+    <string name="filename" value="meshes/building_0000.ply"/>
+    <bsdf type="itu-radio-material" id="building_0000-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0001">
+    <string name="filename" value="meshes/building_0001.ply"/>
+    <bsdf type="itu-radio-material" id="building_0001-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0002">
+    <string name="filename" value="meshes/building_0002.ply"/>
+    <bsdf type="itu-radio-material" id="building_0002-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0003">
+    <string name="filename" value="meshes/building_0003.ply"/>
+    <bsdf type="itu-radio-material" id="building_0003-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0004">
+    <string name="filename" value="meshes/building_0004.ply"/>
+    <bsdf type="itu-radio-material" id="building_0004-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0005">
+    <string name="filename" value="meshes/building_0005.ply"/>
+    <bsdf type="itu-radio-material" id="building_0005-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0006">
+    <string name="filename" value="meshes/building_0006.ply"/>
+    <bsdf type="itu-radio-material" id="building_0006-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0007">
+    <string name="filename" value="meshes/building_0007.ply"/>
+    <bsdf type="itu-radio-material" id="building_0007-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0008">
+    <string name="filename" value="meshes/building_0008.ply"/>
+    <bsdf type="itu-radio-material" id="building_0008-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0009">
+    <string name="filename" value="meshes/building_0009.ply"/>
+    <bsdf type="itu-radio-material" id="building_0009-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0010">
+    <string name="filename" value="meshes/building_0010.ply"/>
+    <bsdf type="itu-radio-material" id="building_0010-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0011">
+    <string name="filename" value="meshes/building_0011.ply"/>
+    <bsdf type="itu-radio-material" id="building_0011-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0012">
+    <string name="filename" value="meshes/building_0012.ply"/>
+    <bsdf type="itu-radio-material" id="building_0012-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0013">
+    <string name="filename" value="meshes/building_0013.ply"/>
+    <bsdf type="itu-radio-material" id="building_0013-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0014">
+    <string name="filename" value="meshes/building_0014.ply"/>
+    <bsdf type="itu-radio-material" id="building_0014-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0015">
+    <string name="filename" value="meshes/building_0015.ply"/>
+    <bsdf type="itu-radio-material" id="building_0015-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0016">
+    <string name="filename" value="meshes/building_0016.ply"/>
+    <bsdf type="itu-radio-material" id="building_0016-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0017">
+    <string name="filename" value="meshes/building_0017.ply"/>
+    <bsdf type="itu-radio-material" id="building_0017-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0018">
+    <string name="filename" value="meshes/building_0018.ply"/>
+    <bsdf type="itu-radio-material" id="building_0018-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0019">
+    <string name="filename" value="meshes/building_0019.ply"/>
+    <bsdf type="itu-radio-material" id="building_0019-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0020">
+    <string name="filename" value="meshes/building_0020.ply"/>
+    <bsdf type="itu-radio-material" id="building_0020-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0021">
+    <string name="filename" value="meshes/building_0021.ply"/>
+    <bsdf type="itu-radio-material" id="building_0021-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0022">
+    <string name="filename" value="meshes/building_0022.ply"/>
+    <bsdf type="itu-radio-material" id="building_0022-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0023">
+    <string name="filename" value="meshes/building_0023.ply"/>
+    <bsdf type="itu-radio-material" id="building_0023-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0024">
+    <string name="filename" value="meshes/building_0024.ply"/>
+    <bsdf type="itu-radio-material" id="building_0024-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0025">
+    <string name="filename" value="meshes/building_0025.ply"/>
+    <bsdf type="itu-radio-material" id="building_0025-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0026">
+    <string name="filename" value="meshes/building_0026.ply"/>
+    <bsdf type="itu-radio-material" id="building_0026-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0027">
+    <string name="filename" value="meshes/building_0027.ply"/>
+    <bsdf type="itu-radio-material" id="building_0027-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0028">
+    <string name="filename" value="meshes/building_0028.ply"/>
+    <bsdf type="itu-radio-material" id="building_0028-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0029">
+    <string name="filename" value="meshes/building_0029.ply"/>
+    <bsdf type="itu-radio-material" id="building_0029-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0030">
+    <string name="filename" value="meshes/building_0030.ply"/>
+    <bsdf type="itu-radio-material" id="building_0030-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0031">
+    <string name="filename" value="meshes/building_0031.ply"/>
+    <bsdf type="itu-radio-material" id="building_0031-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0032">
+    <string name="filename" value="meshes/building_0032.ply"/>
+    <bsdf type="itu-radio-material" id="building_0032-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0033">
+    <string name="filename" value="meshes/building_0033.ply"/>
+    <bsdf type="itu-radio-material" id="building_0033-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0034">
+    <string name="filename" value="meshes/building_0034.ply"/>
+    <bsdf type="itu-radio-material" id="building_0034-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0035">
+    <string name="filename" value="meshes/building_0035.ply"/>
+    <bsdf type="itu-radio-material" id="building_0035-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0036">
+    <string name="filename" value="meshes/building_0036.ply"/>
+    <bsdf type="itu-radio-material" id="building_0036-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0037">
+    <string name="filename" value="meshes/building_0037.ply"/>
+    <bsdf type="itu-radio-material" id="building_0037-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0038">
+    <string name="filename" value="meshes/building_0038.ply"/>
+    <bsdf type="itu-radio-material" id="building_0038-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0039">
+    <string name="filename" value="meshes/building_0039.ply"/>
+    <bsdf type="itu-radio-material" id="building_0039-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0040">
+    <string name="filename" value="meshes/building_0040.ply"/>
+    <bsdf type="itu-radio-material" id="building_0040-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0041">
+    <string name="filename" value="meshes/building_0041.ply"/>
+    <bsdf type="itu-radio-material" id="building_0041-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0042">
+    <string name="filename" value="meshes/building_0042.ply"/>
+    <bsdf type="itu-radio-material" id="building_0042-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0043">
+    <string name="filename" value="meshes/building_0043.ply"/>
+    <bsdf type="itu-radio-material" id="building_0043-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0044">
+    <string name="filename" value="meshes/building_0044.ply"/>
+    <bsdf type="itu-radio-material" id="building_0044-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0045">
+    <string name="filename" value="meshes/building_0045.ply"/>
+    <bsdf type="itu-radio-material" id="building_0045-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0046">
+    <string name="filename" value="meshes/building_0046.ply"/>
+    <bsdf type="itu-radio-material" id="building_0046-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0047">
+    <string name="filename" value="meshes/building_0047.ply"/>
+    <bsdf type="itu-radio-material" id="building_0047-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0048">
+    <string name="filename" value="meshes/building_0048.ply"/>
+    <bsdf type="itu-radio-material" id="building_0048-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0049">
+    <string name="filename" value="meshes/building_0049.ply"/>
+    <bsdf type="itu-radio-material" id="building_0049-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0050">
+    <string name="filename" value="meshes/building_0050.ply"/>
+    <bsdf type="itu-radio-material" id="building_0050-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0051">
+    <string name="filename" value="meshes/building_0051.ply"/>
+    <bsdf type="itu-radio-material" id="building_0051-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0052">
+    <string name="filename" value="meshes/building_0052.ply"/>
+    <bsdf type="itu-radio-material" id="building_0052-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0053">
+    <string name="filename" value="meshes/building_0053.ply"/>
+    <bsdf type="itu-radio-material" id="building_0053-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0054">
+    <string name="filename" value="meshes/building_0054.ply"/>
+    <bsdf type="itu-radio-material" id="building_0054-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0055">
+    <string name="filename" value="meshes/building_0055.ply"/>
+    <bsdf type="itu-radio-material" id="building_0055-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0056">
+    <string name="filename" value="meshes/building_0056.ply"/>
+    <bsdf type="itu-radio-material" id="building_0056-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0057">
+    <string name="filename" value="meshes/building_0057.ply"/>
+    <bsdf type="itu-radio-material" id="building_0057-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0058">
+    <string name="filename" value="meshes/building_0058.ply"/>
+    <bsdf type="itu-radio-material" id="building_0058-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0059">
+    <string name="filename" value="meshes/building_0059.ply"/>
+    <bsdf type="itu-radio-material" id="building_0059-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0060">
+    <string name="filename" value="meshes/building_0060.ply"/>
+    <bsdf type="itu-radio-material" id="building_0060-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0061">
+    <string name="filename" value="meshes/building_0061.ply"/>
+    <bsdf type="itu-radio-material" id="building_0061-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0062">
+    <string name="filename" value="meshes/building_0062.ply"/>
+    <bsdf type="itu-radio-material" id="building_0062-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0063">
+    <string name="filename" value="meshes/building_0063.ply"/>
+    <bsdf type="itu-radio-material" id="building_0063-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0064">
+    <string name="filename" value="meshes/building_0064.ply"/>
+    <bsdf type="itu-radio-material" id="building_0064-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0065">
+    <string name="filename" value="meshes/building_0065.ply"/>
+    <bsdf type="itu-radio-material" id="building_0065-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0066">
+    <string name="filename" value="meshes/building_0066.ply"/>
+    <bsdf type="itu-radio-material" id="building_0066-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0067">
+    <string name="filename" value="meshes/building_0067.ply"/>
+    <bsdf type="itu-radio-material" id="building_0067-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0068">
+    <string name="filename" value="meshes/building_0068.ply"/>
+    <bsdf type="itu-radio-material" id="building_0068-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0069">
+    <string name="filename" value="meshes/building_0069.ply"/>
+    <bsdf type="itu-radio-material" id="building_0069-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0070">
+    <string name="filename" value="meshes/building_0070.ply"/>
+    <bsdf type="itu-radio-material" id="building_0070-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0071">
+    <string name="filename" value="meshes/building_0071.ply"/>
+    <bsdf type="itu-radio-material" id="building_0071-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Building mesh + ITU material -->
+  <shape type="ply" id="building_0072">
+    <string name="filename" value="meshes/building_0072.ply"/>
+    <bsdf type="itu-radio-material" id="building_0072-mat">
+      <string name="type" value="concrete"/>
+    </bsdf>
+  </shape>
+
+  <!-- Ground -->
+  <shape type="ply" id="ecc-ground">
+    <string name="filename" value="meshes/ground.ply"/>
+    <bsdf type="itu-radio-material" id="ecc-ground-mat">
+      <string name="type" value="wet_ground"/>
+    </bsdf>
+  </shape>
+</scene>
