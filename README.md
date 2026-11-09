@@ -1,71 +1,98 @@
 # ECC 3D Scene Ray Tracing and OFDM BER Simulation
 
-This project constructs a 3D radio environment around **Ewha Campus Complex (ECC)** from OpenStreetMap building footprints, computes multipath propagation with Sionna RT, and evaluates an OFDM-QPSK link with repetition coding.
+This project builds an approximate 3D radio environment around **Ewha Campus Complex (ECC)** from OpenStreetMap building footprints and uses Sionna RT to investigate multipath propagation and OFDM-QPSK bit error rate.
 
-The notebook follows the complete simulation chain:
+The workflow connects geographic data to a communication-link simulation:
 
-> OpenStreetMap building data → 3D mesh generation → Sionna RT → channel impulse response → OFDM/QPSK → BER
+**OpenStreetMap → 3D building meshes → ray tracing → channel response → OFDM-QPSK → BER**
+
+## Implementation
+
+The project is implemented in [`Lec7_ECC_scene.ipynb`](Lec7_ECC_scene.ipynb). It includes:
+
+- Conversion of geographic coordinates to approximate local coordinates in meters.
+- Extrusion of building footprints into 3D meshes.
+- Scene construction with concrete building materials and wet-ground material.
+- Ray tracing, a spatial path-gain map, and channel impulse-response visualization.
+- Conversion of the ray-traced channel into a 64-subcarrier frequency response.
+- BER comparison between AWGN and the normalized ECC channel.
+
+The saved notebook execution generated **73 building meshes**. Building heights use OSM height metadata where available, otherwise floor counts multiplied by 3 m, or a default height of 10 m.
 
 ## Example Outputs
 
-### Ray-traced coverage map
+### Ray-Traced Path-Gain Map
 
-![Coverage map](coverage.png)
+![Ray-traced path-gain map around ECC](coverage.png)
 
-### Geometry and Tx/Rx placement check
+### Building Footprints and Transmitter/Receiver Locations
 
-![ECC scene verification map](ecc_scene/scene_verification_map.png)
+![ECC geometry and transmitter/receiver placement](ecc_scene/scene_verification_map.png)
 
-## Highlights
+The notebook also contains the channel impulse response, frequency response, and BER comparison plots.
 
-- Downloads building footprints around ECC and converts geographic coordinates to a local meter-based coordinate system.
-- Extrudes 2D building footprints into 3D PLY meshes using OpenStreetMap height metadata when available.
-- Builds a Mitsuba XML scene with ITU radio materials: concrete buildings and wet ground.
-- Computes line-of-sight and specular-reflection paths at 3.5 GHz with Sionna RT.
-- Visualizes the channel impulse response and OFDM frequency response.
-- Compares theoretical and simulated QPSK BER in AWGN with repetition-coded QPSK over the ECC ray-tracing channel.
+## Link Simulation
 
-## Repository Structure
+The transmitter maps bits to QPSK symbols, arranges them into an OFDM grid, and performs an IFFT with cyclic-prefix insertion.
 
-```text
-.
-├── Lec7_ECC_scene.ipynb          # End-to-end simulation notebook
-├── coverage.png                   # Ray-traced coverage-map result
-└── ecc_scene/
-    ├── scene.xml                  # Mitsuba/Sionna RT scene definition
-    ├── scene_verification_map.png # 2D geometry and Tx/Rx placement check
-    └── meshes/                    # Generated building and ground PLY meshes
-```
+For channel evaluation, the implementation removes the prefix, returns to the frequency domain, and applies the channel response separately to each subcarrier. It then adds complex Gaussian noise and uses channel-aware one-tap equalization.
 
-## Setup
+For repetition-coded transmission, each information bit is repeated three times. The receiver sums the corresponding equalized decision values before making a bit decision.
 
-Create a Python environment compatible with Sionna RT and Mitsuba, then install the required packages:
+Four curves are compared:
 
-```bash
-pip install sionna osmnx trimesh mapbox-earcut triangle matplotlib pandas scipy shapely torch jupyterlab
-```
+- Theoretical uncoded QPSK in AWGN.
+- Simulated uncoded QPSK in AWGN.
+- Repetition-coded QPSK in AWGN.
+- Repetition-coded QPSK over the normalized ECC ray-tracing channel.
 
-The notebook was executed with a CUDA-enabled NVIDIA GPU using the `cuda_ad_mono_polarized` Mitsuba variant. A CUDA-capable environment is recommended for practical ray-tracing runtime. Sionna RT also supports CPU-based configurations when the required Mitsuba and LLVM dependencies are available.
+In the saved plot, the uncoded AWGN simulation closely follows the theoretical curve. The repetition-coded AWGN result is also close to that curve under the information-bit energy normalization used here. The ECC channel shows higher BER over part of the evaluated range.
+
+## Simulation Settings
+
+| Setting | Value |
+| --- | --- |
+| Scene center | 37.56101° N, 126.94614° E |
+| OSM query distance | 250 m |
+| Carrier frequency | 3.5 GHz |
+| Antennas | Single-element, vertically polarized isotropic Tx/Rx |
+| Tx / Rx height | 20 m / 10 m |
+| Point-to-point ray tracing | LoS and specular reflections, maximum depth 5 |
+| Radio-map cell size | 5 m × 5 m |
+| OFDM grid | 64 subcarriers × 14 symbols |
+| Subcarrier spacing | 30 kHz |
+| Cyclic prefix | 8 samples |
+| Modulation | QPSK |
+| Repetition factor | 3 |
+| Eb/N0 range | −4 to 12 dB |
+| Trials per condition and Eb/N0 point | 2,000 |
 
 ## Running the Notebook
 
-1. Open `Lec7_ECC_scene.ipynb` from the repository root.
-2. Run the cells from top to bottom.
-3. The first part of the notebook queries OpenStreetMap and regenerates the meshes and `ecc_scene/scene.xml`.
-4. The later sections render the coverage map and evaluate the OFDM-QPSK BER curves.
+The saved execution records **Sionna 2.0.1**, **PyTorch 2.9.1+cu126**, and an **NVIDIA GeForce RTX 4090**, using the `cuda_ad_mono_polarized` Mitsuba variant.
 
-An internet connection is required when regenerating the OpenStreetMap scene. The included `ecc_scene/` directory contains the generated mesh and scene assets used for the published results.
+In a compatible Python and CUDA environment, install the dependencies:
 
-## Simulation Configuration
+```bash
+python -m pip install "sionna==2.0.1" osmnx trimesh triangle matplotlib pandas scipy shapely torch jupyterlab
+```
 
-| Item | Value |
-| --- | --- |
-| Carrier frequency | 3.5 GHz |
-| Antennas | Single-element, vertically polarized isotropic Tx/Rx arrays |
-| Propagation model | Line-of-sight and specular reflection, maximum depth 5 |
-| OFDM | 64-point FFT, 30 kHz subcarrier spacing, 14 symbols, 8-sample cyclic prefix |
-| Modulation and coding | QPSK with repetition factor 3 |
+Open `Lec7_ECC_scene.ipynb` from the repository root and run the cells in order.
+
+The first sections query OpenStreetMap and regenerate `ecc_scene/scene.xml` and its meshes. Later sections compute propagation paths, render the path-gain map, and evaluate BER.
+
+Internet access is required for the OSM query. Rerunning the scene-generation cells can overwrite the included assets, and updated OSM data may produce a different scene.
+
+## Scope and Assumptions
+
+- Buildings are simplified extrusions on flat ground. The model does not reproduce detailed ECC architecture or terrain and has not been calibrated against field measurements.
+- Before BER evaluation, the channel is normalized to unit average subcarrier power. The BER curves therefore examine frequency selectivity rather than absolute received power or site coverage.
+- The link simulation assumes a static channel and perfect channel knowledge. Channel estimation and synchronization errors are not modeled.
+- Channel effects are applied in the frequency domain. The experiment does not test time-domain intersymbol interference or performance with an insufficient cyclic prefix.
+- Repeated bits are combined with equal weights after equalization; the receiver does not implement reliability-weighted LLR combining.
 
 ## Data Attribution
 
-Building footprints are retrieved from [OpenStreetMap](https://www.openstreetmap.org/). © OpenStreetMap contributors; data is available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
+Building footprints are retrieved from [OpenStreetMap](https://www.openstreetmap.org/).
+
+© OpenStreetMap contributors. Data is available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright).
